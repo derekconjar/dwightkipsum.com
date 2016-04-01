@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if IE]><html class="ie" lang="en"><![endif]-->
+<!--[if !(IE)]><!--><html lang="en"><!--<![endif]-->
+
+<head>
+
+<!-- This site was conceived, designed and developed in a few evenings by Derek Conjar
+     http://linkedin.com/in/dconjar
+
+   Things To Do
+   ============
+   - On update button clicks, #quotes div should become highlighted
+   - Test browser compatibility
+   - Improve mobile compatibility (maybe - who would use it on a smartphone?)
+
+-->
+
+   <title>Dwight K. Ipsum Filler Text Generator</title>
+
+   <meta name="description" content="Dwight K. Ipsum is the original Dwight Schrute filler text generator. Idiot.">
+   <meta name="viewport" content="width=device-width" />
+
+   <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+
+   <script src="js/quotes-model.js"></script>
+   <script src="js/quotes-view.js"></script> 
+   
+   <link href="styles.css" rel="stylesheet" type="text/css" />
+   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+</head>
+
+<body onload="run_load_scripts();">
+
+   <!-- Facebook share thumbnail -->
+   <img src="images/dwight-facebook.jpg" title="Dwight K. Ipsum Filler Text Generator" class="display-off-page" />
+
+   <!-- Facebook SDK -->
+   <div id="fb-root"></div>
+   <script>
+      (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+         fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+   </script>
+
+   <div id="container">
+      <div class="padding">
+      
+         <header>
+         
+            <div class="logo lefthalf">
+               <a href="index.html" title="This link takes you to the same page, but clears your query parameter. Do your worst."><img src="images/logo.jpg" alt="Dwight K. Ipsum Filler Text Generator" /></a>
+            </div><!-- logo -->
+         
+            <div class="righthalf">
+            
+               <img src="images/slogan.jpg" alt="Bears. Beets. Battlestar Galactica." class="slogan" />
+               
+               <div class="social">
+
+                  <div class="fb-like" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+               </div><!-- social -->
+
+            </div><!-- right half -->
+
+            <br class="clear" />
+
+         </header>
+
+         <div id="schrute">
+            <div id="dunder-mifflin-paper">
+         
+               <div id="quotes" onclick="select_text('quotes');">
+                  <noscript>
+                     <p><strong>You can use this site without JavaScript enabled?</strong></p>
+                     <p>False. If you were driving a Trans-Am, you would be the smartest idiot in the whole world.</p>
+                     <p>Idiot.</p>
+                  </noscript>
+               </div><!-- quotes -->
+
+               <img src="images/question.png" alt="Question: How Many Paragraphs?" />
+
+               <form name="update_quotes" id="update_quotes" onsubmit="update_quote_box(); return false;">
+                  <input type="text" name="num_paragraphs" id="num_paragraphs" value="" onfocus="clear_textbox(this);" onblur="restore_textbox(this);" />
+                  <ul>
+                     <li class="update" onclick="update_quote_box();">Update</li>
+                     <li class="update sfw" onclick="update_quote_box_sfw();">SFW Update</li>
+                  </ul>
+               </form>
+
+            </div><!-- dunder-mifflin-paper -->
+         </div><!-- schrute -->
+      </div><!-- padding -->
+   </div><!-- container -->
+
+   <footer>
+      <span class="credit">Artwork by <a href="https://cerzus69.deviantart.com/art/Dwight-Schrute-166104060">Cerzus69</a>. Check out his work on <a href="https://cerzus69.deviantart.com/">deviantART</a>.</span>
+   </footer>
+
+</body>
+</html>
